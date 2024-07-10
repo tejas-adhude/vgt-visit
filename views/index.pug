@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    title VGT visit
+    link(rel='icon', type='image/png', href='logo.png')
+    meta(name="viewport" content="width=device-width")
+    link(rel='stylesheet', href='stylesheet.css')
+    link(rel='stylesheet', href='stylesheet-nav.css')
+    
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet")
+  body
+    div.home-top
+      div.welcome-menu
+        a.welcome-logo(href='#')
+          img(src='logo.png', alt='VGT Visit Logo')
+        div.welcome-span#wel-ani(hidden)
+          span.welcome-span1 V
+          span.welcome-span1 G
+          span.welcome-span1 T
+          span#welcome-span2 visit
+      div.navbar
+        ul.navbar-menu
+          li.navbar-menu-item
+            a(href='/') Home
+          li.navbar-menu-item
+            a(href='/allplaces') See All Places
+          li.navbar-menu-item
+            a(href='/') About
+          li.navbar-menu-item
+            a(href='/') Contact Us
+
+    div#container
+      each image in images
+        div.box
+          img(id=`${image.title}-img`,class="place-img",src=image.src, alt=image.alt,onclick="placeNimg()")
+          h3(id=`${image.title}`,class="place-name", onclick="placeN()")= image.title.replace(/-/g, ' ')
+    
+    script(src="script11.js") 
+    script.
+        function placeN() {
+        let myElement = document.getElementById(event.target.id);
+        let myContent = myElement.innerHTML;
+        let cat_name=myContent.replace(/\s+/g,"-")
+        window.location.href = '/catPlaces?name='+cat_name;
+        }
+
+        function placeNimg() {
+        let myElement = document.getElementById(event.target.id);
+        let secondElement = myElement.nextElementSibling;
+        let myContent =secondElement.innerHTML;
+        let cat_name=myContent.replace(/\s+/g,"-");
+        window.location.href = '/catPlaces?name='+cat_name;
+        }
+

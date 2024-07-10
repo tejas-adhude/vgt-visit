@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    title=title
+    meta(name="viewport" content="width=device-width")
+    link(rel='stylesheet', href='stylesheet-nav.css')
+    link(rel='stylesheet', href='stylesheet-pl.css')
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet")
+  body
+    div.home-top
+      div.welcome-menu
+        a.welcome-logo(href='#')
+          img(src='logo.png', alt='VGT Visit Logo')
+        div.welcome-span
+          span.welcome-span1 V
+          span.welcome-span1 G
+          span.welcome-span1 T
+          span#welcome-span2 visit
+      div.navbar
+        ul.navbar-menu
+          li.navbar-menu-item
+            a(href='/') Home
+          li.navbar-menu-item
+            a(href='/allplaces') See All Places
+          li.navbar-menu-item
+            a(href='/') About
+          li.navbar-menu-item
+            a(href='/') Contact Us
+
+    div.main-flex
+      div#image-of-place-div
+        // Image of Place Section 
+        section#image-of-place
+          img(src = imageurl, alt='[insert image description here]')
+          span#span-title=title 
+      div.sub-flex
+        // About Section 
+        section#about
+          h2 About
+          p=about
+
+        // Distance Section 
+        section#distance
+          h2 Distance
+          li
+            b By Road: 
+            span=byRoad 
+          li
+            b By Railway: 
+            span=byRailway 
+          li
+            b By Air: 
+            span=byAir 
+
+        // History Section 
+        section#history
+          h2 History 
+          p=history 
+

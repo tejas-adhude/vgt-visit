@@ -1,0 +1,67 @@
+#image-of-place-div{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+#image-of-place {
+  width:50%;
+  position: relative;
+  z-index: -1;
+  
+}
+#image-of-place img {
+  display: block;
+  max-width: 100%;
+}
+
+#about {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+#distance {
+  background-color:white;
+  padding: 20px;
+}
+
+#history {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#rules {
+  background-color:white;
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size:35px;
+}
+
+#rules li {
+  margin-bottom: 10px;
+}
+
+.main-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sub-flex{
+  display: flex;
+  flex-direction: column;
+}
+
+#span-title{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
